@@ -1,0 +1,61 @@
+Screenshot Guide for Teacher Submission
+
+CORE CODE SECTIONS TO CAPTURE:
+
+Section 1: Project Structure (ESSENTIAL)
+- Take screenshot of folder hierarchy
+- Show: data/, src/, models/, utils/, app.py, train.py, config.py locations
+- Command: dir or tree in file explorer
+
+Section 2: Model Architecture (src/models.py)
+- Screenshot lines 13-42: AttentionModule class definition
+- Show: SE module + CBAM implementation
+- Caption: "Attention mechanism for feature enhancement"
+
+Section 3: Data Loading (src/data_loader.py)
+- Screenshot lines 117-131: create_dataset_from_directory() method
+- Show: glob pattern, train/val/test split logic
+- Caption: "Automatic data loading and dataset partitioning"
+
+Section 4: Training Pipeline (train.py)
+- Screenshot lines 27-47: EarlyStopping class
+- Show: patience mechanism, best model saving
+- Caption: "Early stopping to prevent overfitting"
+
+Section 5: Training Loop (train.py)
+- Screenshot lines 135-145: train_epoch() method
+- Show: loss calculation and accuracy tracking
+- Caption: "Training loop with loss computation"
+
+Section 6: Configuration (config.py)
+- Screenshot lines 1-60: All parameter definitions
+- Show: IMAGE_SIZE, BATCH_SIZE, AUGMENTATION_PARAMS, TRAINING config
+- Caption: "Centralized hyperparameter configuration"
+
+Section 7: Web Interface (app.py)
+- Screenshot lines 82-116: main() function
+- Show: mode selection (Single/Batch/Demo)
+- Caption: "Multi-mode interactive interface"
+
+Section 8: Training Output (Terminal)
+- Screenshot showing successful training completion
+- Show: epoch progress, loss values, validation accuracy
+- Caption: "Successful model training with early stopping triggered"
+
+Section 9: Web Application (Browser)
+- Screenshot of Streamlit UI showing detection results
+- Show: Original image + Detection result + Confidence score
+- Caption: "Detection interface displaying real/fake classification"
+
+Section 10: Model Files (File Explorer)
+- Screenshot showing trained models in models/ folder
+- Show: best_model.pth, final_model.pth files and their sizes
+- Caption: "Saved model checkpoints"
+
+OPTIONAL (if space allows):
+- requirements.txt showing all dependencies
+- PROJECT_DOCUMENTATION.md (textual version)
+- start_app.bat showing automated deployment
+
+TOTAL: 10 screenshots recommended
+ESTIMATED IMPACT: Comprehensive demonstration of implementation

@@ -1,0 +1,63 @@
+# Quick Start Guide
+
+## Recommended: Direct Start (if working)
+
+Double-click `start_app.bat` to launch the application.
+
+The app will open in your browser at `http://localhost:8501`
+
+## If start_app.bat fails
+
+If you see an error about missing virtual environment or Python version mismatch:
+
+1. Double-click `setup_env.bat` to automatically rebuild the environment
+2. Wait for installation to complete (may take 2-3 minutes)
+3. Then try `start_app.bat` again
+
+## Manual setup (if batch files don't work)
+
+Open PowerShell in the project folder and run:
+
+```powershell
+# Create virtual environment
+python -m venv .venv
+
+# Activate it
+.\.venv\Scripts\Activate.ps1
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+streamlit run app.py
+```
+
+## System Requirements
+
+- Windows 10 or later (or Mac/Linux with equivalents)
+- Python 3.10 or 3.11
+- At least 2GB free disk space
+
+## Training with New Data
+
+1. Place training images in:
+   - `data/raw/real/` - for real images
+   - `data/raw/fake/` - for fake/AI-generated images
+
+2. Open command prompt in the project folder and run:
+   ```
+   python train.py --epochs 50 --batch-size 32
+   ```
+
+## Troubleshooting
+
+**Q: Application won't start**
+A: Run `setup_env.bat` to rebuild the Python environment
+
+**Q: Port 8501 already in use**  
+A: Check the command prompt for a different port address, or close other Streamlit instances
+
+**Q: Missing modules error**
+A: Run `pip install -r requirements.txt` again
+
+For more details, see `PROJECT_DOCUMENTATION.md`
